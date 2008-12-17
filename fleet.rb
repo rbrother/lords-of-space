@@ -14,7 +14,7 @@ end
 
 class Hash
     def inspect_sorted(&block)        
-        self.keys.sort_by(&block).map { |k| "#{k} x #{self[k]}" }.join(', ')
+        self.keys.sort_by(&block).map { |k| "#{k} => #{self[k]}" }.join(', ')
     end
 end
 
@@ -90,10 +90,10 @@ class TestFleet < Test::Unit::TestCase
         fleet = Fleet.new("Roope", { Fighter => 1, Carrier => 1, Cruiser => 2, Dreadnought => 1, PDS => 2 } )
         assert_equal( 5, fleet.size )
         assert_equal( 2, fleet.pds_units.size )
-        assert_equal( "Fleet Roope: Dreadnought x 1, Carrier x 1, Cruiser x 2, Fighter x 1, PDS x 2 (cost 16.5)", fleet.to_s)
+        assert_equal( "Fleet Roope: Dreadnought => 1, Carrier => 1, Cruiser => 2, Fighter => 1, PDS => 2 (cost 16.5)", fleet.to_s)
         assert fleet.ship_to_take_damage.kind_of?(Dreadnought)
         fleet.take_damage(3)
-        assert_equal( "Fleet Roope: Dreadnought x 1, Carrier x 1, Cruiser x 1, PDS x 2 (cost 14)", fleet.to_s)        
+        assert_equal( "Fleet Roope: Dreadnought => 1, Carrier => 1, Cruiser => 1, PDS => 2 (cost 14)", fleet.to_s)        
     end
 end
 
