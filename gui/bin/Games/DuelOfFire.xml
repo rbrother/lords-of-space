@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Map>
+    <SpaceSystem xsi:type="SetupTile" x="0" y="0" name="A0" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="1" y="0" name="B0" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="2" y="0" name="C0" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="3" y="0" name="D0" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="4" y="0" name="E0" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="0" y="1" name="A1" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="1" y="1" name="B1" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="2" y="1" name="C1" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="3" y="1" name="D1" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="4" y="1" name="E1" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="5" y="1" name="F1" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="0" y="2" name="A2" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="1" y="2" name="B2" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="2" y="2" name="C2" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="3" y="2" name="D2" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="4" y="2" name="E2" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="5" y="2" name="F2" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="6" y="2" name="G2" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="0" y="3" name="A3" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="1" y="3" name="B3" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="2" y="3" name="C3" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="3" y="3" name="D3" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="4" y="3" name="E3" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="5" y="3" name="F3" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="6" y="3" name="G3" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="7" y="3" name="H3" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="0" y="4" name="A4" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="1" y="4" name="B4" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="2" y="4" name="C4" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="3" y="4" name="D4" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="4" y="4" name="E4" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="5" y="4" name="F4" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="6" y="4" name="G4" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="7" y="4" name="H4" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="8" y="4" name="J4" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="1" y="5" name="B5" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="2" y="5" name="C5" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="3" y="5" name="D5" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="4" y="5" name="E5" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="5" y="5" name="F5" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="6" y="5" name="G5" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="7" y="5" name="H5" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="8" y="5" name="J5" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="2" y="6" name="C6" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="3" y="6" name="D6" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="4" y="6" name="E6" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="5" y="6" name="F6" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="6" y="6" name="G6" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="7" y="6" name="H6" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="8" y="6" name="J6" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="3" y="7" name="D7" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="4" y="7" name="E7" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="5" y="7" name="F7" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="6" y="7" name="G7" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="7" y="7" name="H7" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="8" y="7" name="J7" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="4" y="8" name="E8" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="5" y="8" name="F8" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="6" y="8" name="G8" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="7" y="8" name="H8" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="8" y="8" name="J8" picFileName="Tile-Setup-DarkBlue.gif" />
+  </Map>
+</Game>

@@ -1,0 +1,76 @@
+﻿<Window x:Class="net.brotherus.game.MapWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:r="clr-namespace:net.brotherus.game"
+    Title="Map" Height="800" Width="800" Closed="Window_Closed">
+	<DockPanel LastChildFill="True">
+		<Menu DockPanel.Dock="Top" HorizontalAlignment="Stretch">
+			<MenuItem Header="_File">
+				<MenuItem Header="New _2 player" Tag="5" Click="MapSizeClicked"/>
+				<MenuItem Header="New 4-_6 player" Tag="7" Click="MapSizeClicked"/>
+				<MenuItem Header="New 7-_8 player" Tag="8" Click="MapSizeClicked"/>
+				<MenuItem Header="_Open Game" Click="OpenGameClicked"/>
+				<MenuItem Header="_Save Game" Click="SaveGameClicked"/>
+				<MenuItem Header="Save Game _As" Click="SaveGameAsClicked"/>
+			</MenuItem>
+		</Menu>
+		<Separator DockPanel.Dock="Top"/>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition/>
+				<ColumnDefinition Width="Auto"/>
+			</Grid.ColumnDefinitions>
+			<Grid Name="optionsPanel" Background="LightGray">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<Label>Zoom</Label>
+				<Slider Grid.Row="1" TickFrequency="25" TickPlacement="Both" ValueChanged="Slider_ValueChanged" HorizontalAlignment="Center" Minimum="25" Maximum="200" Value="25" Orientation="Vertical"/>
+			</Grid>
+			<ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" Background="Black">
+				<r:MapCanvas x:Name="mapCanvas" Background="Black"/>
+			</ScrollViewer>
+			<Grid Name="tileInfo" Background="LightGray" Grid.Column="2" DataContext="{Binding ElementName=mapCanvas, Path=SelectedTile}">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition/>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
+				<Label Grid.Row="0" Grid.ColumnSpan="2" Margin="2" FontWeight="Bold" >Set Selected Tile</Label>
+				<Label Grid.Row="1" Margin="2">Planet Systems</Label>
+				<ComboBox Grid.Row="1" Margin="2" Grid.Column="1" Name="tileSystemCombo" SelectionChanged="tileSystem_SelectionChanged"  MinWidth="200"/>
+				<Label Grid.Row="2" Margin="2">Home Systems</Label>
+				<ComboBox Grid.Row="2" Margin="2" Grid.Column="1" Name="homeSystemCombo" SelectionChanged="tileSystem_SelectionChanged"  MinWidth="200"/>
+				<Label Grid.Row="3" Margin="2">Special Systems</Label>
+				<ComboBox Grid.Row="3" Margin="2" Grid.Column="1" Name="specialSystemCombo" SelectionChanged="tileSystem_SelectionChanged"  MinWidth="200"/>
+				<Separator Grid.Row="4" Grid.ColumnSpan="2"></Separator>
+				<Label Grid.Row="5" Margin="2">Name</Label>
+				<TextBox Grid.Row="5" Name="tileText" Margin="2" Grid.Column="1" Text="{Binding Path=SystemName}" MinWidth="200"/>
+				<Label Grid.Row="6" Margin="2">System Type</Label>
+				<TextBox Grid.Row="6" Name="systemType" Grid.Column="1" Text="{Binding Path=SystemType, Mode=OneWay}" IsReadOnly="True" Background="LightGray" Margin="2" MinWidth="200"/>
+				<Label Grid.Row="7" Grid.ColumnSpan="2" FontWeight="Bold">Fleet</Label>
+				<Label Grid.Row="8">Has Fleet</Label>
+				<CheckBox Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" IsChecked="{Binding Path=HasFleet}"/>
+			</Grid>
+		</Grid>
+	</DockPanel>
+</Window>

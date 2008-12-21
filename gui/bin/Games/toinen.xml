@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Map>
+    <SpaceSystem xsi:type="SetupTile" x="0" y="0" name="A0" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="1" y="0" name="B0" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="2" y="0" name="C0" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="0" y="1" name="A1" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="1" y="1" name="B1" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="2" y="1" name="C1" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="3" y="1" name="D1" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="0" y="2" name="A2" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="1" y="2" name="B2" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="2" y="2" name="C2" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="3" y="2" name="D2" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="4" y="2" name="E2" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="1" y="3" name="B3" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="2" y="3" name="C3" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="3" y="3" name="D3" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="4" y="3" name="E3" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="2" y="4" name="C4" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="3" y="4" name="D4" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" x="4" y="4" name="E4" picFileName="Tile-Setup-Red.gif" />
+  </Map>
+</Game>

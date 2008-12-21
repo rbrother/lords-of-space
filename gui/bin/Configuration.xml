@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CurrentGameFileName="D:\work\ti\LordsOfSpace\Games\DuelOfFire.xml">
+  <Systems>
+    <SpaceSystem xsi:type="SetupTile" name="Setup-Yellow" picFileName="Tile-Setup-Yellow.gif" />
+    <SpaceSystem xsi:type="SetupTile" name="Setup-Red" picFileName="Tile-Setup-Red.gif" />
+    <SpaceSystem xsi:type="SetupTile" name="Setup-Blue" picFileName="Tile-Setup-MediumBlue.gif" />
+    <SpaceSystem xsi:type="SetupTile" name="Setup-DarkBlue" picFileName="Tile-Setup-DarkBlue.gif" />
+    <SpaceSystem xsi:type="EmptySystem" name="Empty" picFileName="Tile-Empty.gif" />
+    <SpaceSystem xsi:type="EmptySystem" name="Wormhole A" picFileName="Tile-Wormhole_A.gif" wormHole="A" />
+    <SpaceSystem xsi:type="EmptySystem" name="Wormhole B" picFileName="Tile-Wormhole_B.gif" wormHole="B" />
+    <SpaceSystem xsi:type="AsteroidField" name="Asteroid Field" picFileName="Tile-Asteroid_Field.gif" />
+    <SpaceSystem xsi:type="Nebula" name="Nebula" picFileName="Tile-Nebula.gif" />
+    <SpaceSystem xsi:type="SuperNova" name="Supernova" picFileName="Tile-Supernova.gif" />
+    <SpaceSystem xsi:type="IonStorm" name="Ion Storm" picFileName="Tile-Ion_Storm.gif" />
+    <SpaceSystem xsi:type="HomeSystem" picFileName="Tile-HS-Hacan.gif" race="Hacan">
+      <Planet name="Arretze" resources="2" influence="0" owner="Hacan" />
+      <Planet name="Herkant" resources="1" influence="1" owner="Hacan" />
+      <Planet name="Kamdorn" resources="0" influence="1" owner="Hacan" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="HomeSystem" picFileName="Tile-HS-Jolnar.gif" race="JolNar">
+      <Planet name="Jol" resources="1" influence="2" owner="JolNar" />
+      <Planet name="Nar" resources="2" influence="3" owner="JolNar" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="HomeSystem" picFileName="Tile-HS-L1z1x.gif" race="L1z1x">
+      <Planet name="[0.0.0]" resources="5" influence="0" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="HomeSystem" picFileName="Tile-HS-Letnev.gif" race="Letnev">
+      <Planet name="Arc Prime" resources="4" influence="0" />
+      <Planet name="Wren Terra" resources="2" influence="1" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="HomeSystem" picFileName="Tile-HS-Mentak.gif" race="Mentak">
+      <Planet name="Moll Primus" resources="4" influence="1" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="HomeSystem" picFileName="Tile-HS-Muaat.gif" race="Muaat">
+      <Planet name="Muaat" resources="4" influence="1" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="HomeSystem" picFileName="Tile-HS-Naalu.gif" race="Naalu">
+      <Planet name="Maaluuk" resources="0" influence="2" />
+      <Planet name="Druaa" resources="3" influence="1" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="HomeSystem" picFileName="Tile-HS-Norr.gif" race="Norr">
+      <Planet name="Trenlak" resources="1" influence="0" />
+      <Planet name="Quinarra" resources="3" influence="1" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="HomeSystem" picFileName="Tile-HS-Saar.gif" race="Saar">
+      <Planet name="Lisis II" resources="1" influence="0" />
+      <Planet name="Ragh" resources="2" influence="1" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="HomeSystem" picFileName="Tile-HS-Sol.gif" race="Sol">
+      <Planet name="Jord" resources="4" influence="2" owner="Sol" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="HomeSystem" name="Winnu" picFileName="Tile-HS-Winnu.gif" race="Winnu">
+      <Planet name="Winnu" resources="3" influence="4" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="HomeSystem" picFileName="Tile-HS-Xxcha.gif" race="Xxcha">
+      <Planet name="Archon Ren" resources="2" influence="3" />
+      <Planet name="Archon Tau" resources="1" influence="1" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="HomeSystem" picFileName="Tile-HS-Yin.gif" race="Yin">
+      <Planet name="Darien" resources="2" influence="4" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="HomeSystem" picFileName="Tile-HS-Yssaril.gif" race="Yssaril">
+      <Planet name="Retillion" resources="2" influence="3" />
+      <Planet name="Shalloo" resources="1" influence="2" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="PlanetSystem" picFileName="Tile-Abyz-Fria.gif">
+      <Planet name="Abyz" resources="3" influence="0" />
+      <Planet name="Fria" resources="2" influence="0" techSpeciality="Blue" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="PlanetSystem" picFileName="Tile-Arinam-Meer.gif">
+      <Planet name="Arinam" resources="1" influence="2" techSpeciality="Blue" />
+      <Planet name="Meer" resources="0" influence="4" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="PlanetSystem" picFileName="Tile-Arnor-Lor.gif">
+      <Planet name="Arnor" resources="2" influence="1" />
+      <Planet name="Lor" resources="1" influence="2" techSpeciality="Red" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="PlanetSystem" picFileName="Tile-Ashtroth-Loki-Abaddon.gif">
+      <Planet name="Ashtroth" resources="2" influence="0" />
+      <Planet name="Loki" resources="1" influence="2" />
+      <Planet name="Abaddon" resources="1" influence="0" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="PlanetSystem" picFileName="Tile-Bereg-Lirta_IV.gif">
+      <Planet name="Bereg" resources="3" influence="1" techSpeciality="Red" />
+      <Planet name="Lirta IV" resources="2" influence="3" techSpeciality="Green" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="PlanetSystem" picFileName="Tile-Capha.gif">
+      <Planet name="Capha" resources="3" influence="0" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="PlanetSystem" picFileName="Tile-Centauri-Gral.gif">
+      <Planet name="Centauri" resources="1" influence="3" />
+      <Planet name="Gral" resources="1" influence="1" techSpeciality="Blue" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="PlanetSystem" picFileName="Tile-Coorneeq-Resculon.gif">
+      <Planet name="Coorneeq" resources="1" influence="2" techSpeciality="Red" />
+      <Planet name="Resculon" resources="2" influence="0" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="PlanetSystem" picFileName="Tile-Dal_Bootha-Xxehan.gif">
+      <Planet name="Dal Bootha" resources="0" influence="2" techSpeciality="Red" />
+      <Planet name="Xxehan" resources="1" influence="1" techSpeciality="Green" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="PlanetSystem" picFileName="Tile-Elnath.gif">
+      <Planet name="Elnath" resources="2" influence="0" techSpeciality="Blue" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="PlanetSystem" picFileName="Tile-Garbozia.gif">
+      <Planet name="Garbozia" resources="2" influence="1" techSpeciality="Green" />
+    </SpaceSystem>
+    <SpaceSystem xsi:type="PlanetSystem" name="Hopes_End" picFileName="Tile-Hopes_End.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Lazar-Sakulag" picFileName="Tile-Lazar-Sakulag.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Lesab" picFileName="Tile-Lesab.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Lisis-Velnor" picFileName="Tile-Lisis-Velnor.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Lodor" picFileName="Tile-Lodor.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Mecatol_Rex" picFileName="Tile-Mecatol_Rex.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Mehar_Xull" picFileName="Tile-Mehar_Xull.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Mellon-Zohbat" picFileName="Tile-Mellon-Zohbat.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Mirage" picFileName="Tile-Mirage.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="New_Albion-Starpoint" picFileName="Tile-New_Albion-Starpoint.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Nexus" picFileName="Tile-Nexus.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Perimeter" picFileName="Tile-Perimeter.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Primor" picFileName="Tile-Primor.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Quann" picFileName="Tile-Quann.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Qucenn-Rarron" picFileName="Tile-Qucenn-Rarron.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Rigel" picFileName="Tile-Rigel.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Saudor" picFileName="Tile-Saudor.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Sumerian-Arcturus" picFileName="Tile-Sumerian-Arcturus.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Tarmann" picFileName="Tile-Tarmann.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Tequran-Torkan" picFileName="Tile-Tequran-Torkan.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Thibah" picFileName="Tile-Thibah.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Tsion-Bellatrix" picFileName="Tile-Tsion-Bellatrix.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Vefut_II" picFileName="Tile-Vefut_II.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Vega" picFileName="Tile-Vega.gif" />
+    <SpaceSystem xsi:type="PlanetSystem" name="Wellon" picFileName="Tile-Wellon.gif" />
+  </Systems>
+  <Races>
+    <Race name="Federation of Sol" shortName="Sol" ccPicFile="CC-Sol.gif" flagPicFile="Flag-LgRnd-Sol.gif" />
+  </Races>
+</Configuration>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Robert Brotherus (Napa) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ROOT ELEMENTS OF DOCUMENTS -->
+	<xs:element name="Configuration">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Systems"/>
+				<xs:element ref="Races"/>
+			</xs:sequence>
+			<xs:attribute name="CurrentGameFileName" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Game">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Map">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SpaceSystem" type="SystemType" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Components -->
+	<xs:element name="Systems">
+		<xs:annotation>
+			<xs:documentation>All systems available in the game (not necessarily in the map)</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SpaceSystem" type="SystemType" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="SystemType" abstract="true">
+		<xs:sequence>
+			<xs:element ref="Fleet" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="x" type="xs:int" use="optional"/>
+		<xs:attribute name="y" type="xs:int" use="optional"/>
+		<xs:attribute name="name" type="xs:string" use="optional"/>
+		<xs:attribute name="picFileName" type="xs:string" use="required"/>
+		<xs:attribute name="wormHole" type="WormHoleID" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="SetupTile">
+		<xs:complexContent>
+			<xs:extension base="SystemType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="EmptySystem">
+		<xs:complexContent>
+			<xs:extension base="SystemType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RedSystem" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="SystemType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Nebula">
+		<xs:complexContent>
+			<xs:extension base="RedSystem"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="IonStorm">
+		<xs:complexContent>
+			<xs:extension base="RedSystem"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AsteroidField">
+		<xs:complexContent>
+			<xs:extension base="RedSystem"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SuperNova">
+		<xs:complexContent>
+			<xs:extension base="RedSystem"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PlanetSystem">
+		<xs:complexContent>
+			<xs:extension base="SystemType">
+				<xs:sequence>
+					<!-- TODO: change minoccurs to 1 when all systems have been given -->
+					<xs:element ref="Planet" minOccurs="0" maxOccurs="3"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="HomeSystem">
+		<xs:complexContent>
+			<xs:extension base="PlanetSystem">
+				<xs:attribute name="race" type="RaceType" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Planet">
+		<xs:complexType>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="resources" type="xs:int" use="required"/>
+			<xs:attribute name="influence" type="xs:int" use="required"/>
+			<xs:attribute name="exhausted" type="xs:boolean" use="optional" default="false"/>
+			<xs:attribute name="techSpeciality" type="TechColor" use="optional"/>
+			<xs:attribute name="owner" type="RaceType" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Fleet">
+		<xs:complexType>
+			<xs:attribute name="owner" type="RaceType" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Races">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Race"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Race">
+		<xs:complexType>
+			<xs:sequence/>
+			<xs:attribute name="name" type="xs:string"/>
+			<xs:attribute name="shortName" type="RaceType"/>
+			<xs:attribute name="ccPicFile" type="xs:string"/>
+			<xs:attribute name="flagPicFile" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="RaceType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Hacan"/>
+			<xs:enumeration value="JolNar"/>
+			<xs:enumeration value="L1z1x"/>
+			<xs:enumeration value="Letnev"/>
+			<xs:enumeration value="Mentak"/>
+			<xs:enumeration value="Muaat"/>
+			<xs:enumeration value="Naalu"/>
+			<xs:enumeration value="Norr"/>
+			<xs:enumeration value="Saar"/>
+			<xs:enumeration value="Sol"/>
+			<xs:enumeration value="Winnu"/>
+			<xs:enumeration value="Xxcha"/>
+			<xs:enumeration value="Yin"/>
+			<xs:enumeration value="Yssaril"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WormHoleID">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A"/>
+			<xs:enumeration value="B"/>
+			<xs:enumeration value="C"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TechColor">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Blue"/>
+			<xs:enumeration value="Green"/>
+			<xs:enumeration value="Red"/>
+			<xs:enumeration value="Yellow"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
