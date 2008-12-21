@@ -92,14 +92,6 @@ namespace net.brotherus.game {
             }
         }
 
-        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e) 
-        {
-            Slider zoomSlider = (Slider)sender;
-            if (this.mapCanvas != null) {
-                this.mapCanvas.ScalePercent = zoomSlider.Value;
-            }
-        }
-
         private void Window_Closed(object sender, EventArgs e) 
         {
             if (CurrentGameFileName != null)

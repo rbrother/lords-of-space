@@ -24,16 +24,18 @@
 				<ColumnDefinition/>
 				<ColumnDefinition Width="Auto"/>
 			</Grid.ColumnDefinitions>
-			<Grid Name="optionsPanel" Background="LightGray">
+			<Grid Name="optionsPanel" Background="LightGray" DataContext="{Binding ElementName=mapCanvas}">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto"/>
-					<RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
 				</Grid.RowDefinitions>
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition/>
 				</Grid.ColumnDefinitions>
-				<Label>Zoom</Label>
-				<Slider Grid.Row="1" TickFrequency="25" TickPlacement="Both" ValueChanged="Slider_ValueChanged" HorizontalAlignment="Center" Minimum="25" Maximum="200" Value="25" Orientation="Vertical"/>
+				<Label>Zoom %</Label>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Path=ZoomPercent, StringFormat=0}"/>
+                <Slider Grid.Row="2" TickFrequency="25" TickPlacement="Both" HorizontalAlignment="Center" Minimum="25" Maximum="200" Value="{Binding Path=ZoomPercent}" Orientation="Vertical"/>
 			</Grid>
 			<ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" Background="Black">
 				<r:MapCanvas x:Name="mapCanvas" Background="Black"/>

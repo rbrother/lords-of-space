@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -20,6 +21,21 @@ namespace net.brotherus.game
           new FrameworkPropertyMetadata()
         );
 
+        public static readonly DependencyProperty ZoomPercentProperty = DependencyProperty.Register(
+          "ZoomPercent",
+          typeof(double),
+          typeof(MapCanvas),
+          new FrameworkPropertyMetadata(new PropertyChangedCallback(ZoomPercentChanged))
+        );
+
+        private static void ZoomPercentChanged(DependencyObject obj, DependencyPropertyChangedEventArgs args)
+        {
+            MapCanvas mapCanvas = (MapCanvas)obj;
+            double zoom = (double)args.NewValue;
+            Debug.Print("Scale %: " + zoom.ToString());
+            mapCanvas.LayoutTransform = new ScaleTransform(zoom / 100.0, zoom / 100.0); 
+        }
+
         public TileImage SelectedTile
         {
             get { return (TileImage)this.GetValue(SelectedTileProperty); }
@@ -28,7 +44,13 @@ namespace net.brotherus.game
 
         public MapCanvas()
         {
-            ScalePercent = 50;
+            ZoomPercent = 50;
+            this.MouseWheel += new System.Windows.Input.MouseWheelEventHandler(MapCanvas_MouseWheel);
+        }
+
+        void MapCanvas_MouseWheel(object sender, System.Windows.Input.MouseWheelEventArgs e)
+        {
+            ZoomPercent *= (1.0 + e.Delta * 0.001);
         }
 
         public Game Game
@@ -75,7 +97,10 @@ namespace net.brotherus.game
             newTile.Selected = true;
         }
 
-        public double ScalePercent { set { LayoutTransform = new ScaleTransform(value / 100.0, value / 100.0); } }
+        public double ZoomPercent {
+            get { return (double) GetValue(ZoomPercentProperty); }
+            set { SetValue(ZoomPercentProperty, value); } 
+        }
 
         protected override Size MeasureOverride(Size availableSize)
         {
