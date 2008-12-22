@@ -94,9 +94,16 @@ namespace net.brotherus.game {
 
         private void Window_Closed(object sender, EventArgs e) 
         {
-            if (CurrentGameFileName != null)
+            if (!string.IsNullOrEmpty(CurrentGameFileName))
             {
-                SaveGameData(CurrentGameFileName);
+                try
+                {
+                    SaveGameData(CurrentGameFileName);
+                }
+                catch (DirectoryNotFoundException)
+                {
+                    CurrentGameFileName = null;
+                }
             }
             App.SaveConfiguration();
         }
