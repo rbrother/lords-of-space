@@ -11,8 +11,15 @@ class Object
     end
 end
 
+def build(aclass, attrs = {})
+    instance = aclass.new.attr(attrs)
+    if block_given?
+        # to-do: add contents of block to contents of widget
+    end
+    return instance
+end
 
-window = Wpf::Window.new.attr(:width => 400, :height => 300)
+window = build(Wpf::Window, :width => 400, :height => 300, :title => "Ti3 battle calculator")
 
 app = Wpf::Application.new
 app.run(window)
