@@ -2,4 +2,6 @@
 *.dll
 *.suo
 *.pdb
+*.user
+*.exe.manifest
 obj
