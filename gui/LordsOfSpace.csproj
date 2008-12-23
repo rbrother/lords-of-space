@@ -66,6 +66,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="BattleCalculator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MapWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -84,6 +88,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BattleCalculator.xaml.cs">
+      <DependentUpon>BattleCalculator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GameData\Configuration.cs" />
     <Compile Include="GameData\Game.cs" />
     <Compile Include="GameData\SpaceSystems\SetupTile.cs" />
