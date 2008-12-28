@@ -1,0 +1,36 @@
+﻿<UserControl 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+       </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0">Race</Label>
+        <ComboBox Grid.Row="0" Grid.Column="1" MinWidth="80">
+            <ComboBoxItem>Mentak</ComboBoxItem>
+            <ComboBoxItem>JolNar</ComboBoxItem>
+            <ComboBoxItem>Naalu</ComboBoxItem>
+            <ComboBoxItem>Winnu</ComboBoxItem>
+            <ComboBoxItem>Hacan</ComboBoxItem>
+            <ComboBoxItem>Saar</ComboBoxItem>
+            <ComboBoxItem>Xxcha</ComboBoxItem>
+            <ComboBoxItem>L1z1x</ComboBoxItem>
+            <ComboBoxItem>Norr</ComboBoxItem>
+            <ComboBoxItem>Yssaril</ComboBoxItem>
+        </ComboBox>
+        <Label Grid.Row="1">Tech</Label>
+        <StackPanel Grid.Row="1" Grid.Column="1"> 
+            <CheckBox Name="Hylar" Content="Hylar V" />
+            <CheckBox Name="ADT" Content="Auto Def Turrets" />
+            <CheckBox Name="Cybernetics" Content="Cybernetics" />
+            <CheckBox Name="AssaultCannons" Content="Assault Cannons" />
+        </StackPanel>
+    </Grid>
+</UserControl>

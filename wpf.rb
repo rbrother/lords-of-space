@@ -11,4 +11,5 @@ module Wpf
     StackPanel = System::Windows::Controls::StackPanel
     Label = System::Windows::Controls::Label
     Thickness = System::Windows::Thickness
+    XamlReader = System::Windows::Markup::XamlReader
 end

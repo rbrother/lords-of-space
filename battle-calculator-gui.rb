@@ -11,15 +11,9 @@ class Object
     end
 end
 
-def build(aclass, attrs = {})
-    instance = aclass.new.attr(attrs)
-    if block_given?
-        # to-do: add contents of block to contents of widget
-    end
-    return instance
-end
+FileInfo = System::IO::FileInfo
 
-window = build(Wpf::Window, :width => 400, :height => 300, :title => "Ti3 battle calculator")
+window = Wpf::XamlReader.load FileInfo.new("gui/BattleCalculator.xaml").open_read
 
 app = Wpf::Application.new
 app.run(window)

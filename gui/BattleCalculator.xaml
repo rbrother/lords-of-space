@@ -1,8 +1,24 @@
-﻿<Window x:Class="Net.Brotherus.Game.BattleCalculator"
+<Window
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="BattleCalculator" Height="300" Width="300">
+    xmlns:rb="clr-namespace:Net.Brotherus"
+    Title="BattleCalculator" Height="200" Width="300">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Column="0" Grid.Row="1" Header="Attacker">
+            <rb:XamlControl XamlFile="RaceProperties.xaml"/>
+        </GroupBox>
+        <GroupBox Grid.Column="1" Grid.Row="1" Header="Defender">
+            
+        </GroupBox>
+        <Button Grid.Row="2">Fight!</Button>
     </Grid>
 </Window>

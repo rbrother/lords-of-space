@@ -66,11 +66,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="BattleCalculator.xaml">
+    <None Include="BattleCalculator.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <Page Include="MapWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MapWindow.xaml">
+    <None Include="RaceProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -88,9 +95,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BattleCalculator.xaml.cs">
-      <DependentUpon>BattleCalculator.xaml</DependentUpon>
-    </Compile>
     <Compile Include="GameData\Configuration.cs" />
     <Compile Include="GameData\Game.cs" />
     <Compile Include="GameData\SpaceSystems\SetupTile.cs" />
@@ -118,6 +122,7 @@
     <Compile Include="TileImage.xaml.cs">
       <DependentUpon>TileImage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="XamlControl.cs" />
     <Compile Include="XmlIO.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
