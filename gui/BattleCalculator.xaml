@@ -1,7 +1,7 @@
 <Window
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:rb="clr-namespace:Net.Brotherus"
+    xmlns:rb="clr-namespace:Net.Brotherus;assembly=LordsOfSpace,PublicKeyToken=b402b1ffe40d567b"
     Title="BattleCalculator" Height="200" Width="300">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -14,10 +14,10 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <GroupBox Grid.Column="0" Grid.Row="1" Header="Attacker">
-            <rb:XamlControl XamlFile="RaceProperties.xaml"/>
+            <FrameworkElement Name="Attacker" Tag="RaceProperties.xaml"/>
         </GroupBox>
         <GroupBox Grid.Column="1" Grid.Row="1" Header="Defender">
-            
+            <FrameworkElement Name="Defender" Tag="RaceProperties.xaml"/>
         </GroupBox>
         <Button Grid.Row="2">Fight!</Button>
     </Grid>

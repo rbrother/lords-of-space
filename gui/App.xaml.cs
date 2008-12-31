@@ -11,7 +11,7 @@ namespace net.brotherus.game {
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App : Application 
+    public class App
     {
         //private static XmlSerializer configSerializer = new XmlSerializer(typeof(Configuration));
 

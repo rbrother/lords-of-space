@@ -12,4 +12,7 @@ module Wpf
     Label = System::Windows::Controls::Label
     Thickness = System::Windows::Thickness
     XamlReader = System::Windows::Markup::XamlReader
+    Colors = System::Windows::Media::Colors
+    SolidColorBrush = System::Windows::Media::SolidColorBrush
+    SizeToContent = System::Windows::SizeToContent
 end

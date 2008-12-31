@@ -13,7 +13,15 @@ end
 
 FileInfo = System::IO::FileInfo
 
-window = Wpf::XamlReader.load FileInfo.new("gui/BattleCalculator.xaml").open_read
+window = Wpf::XamlReader.load(FileInfo.new("gui/BattleCalculator.xaml").open_read)
+
+attacker_props = Wpf::XamlReader.load(FileInfo.new("gui/RaceProperties.xaml").open_read)
+defender_props = Wpf::XamlReader.load(FileInfo.new("gui/RaceProperties.xaml").open_read)
+
+window.find_name("Attacker").parent.content = attacker_props
+window.find_name("Defender").parent.content = defender_props
+
+window.size_to_content = Wpf::SizeToContent.width_and_height
 
 app = Wpf::Application.new
 app.run(window)
