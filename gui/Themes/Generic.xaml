@@ -1,0 +1,15 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="FrameworkElement">
+        <Setter Property="Margin" Value="2"/>
+    </Style>
+    
+    <Style TargetType="Button" BasedOn="{StaticResource {x:Type FrameworkElement}}"/>
+    <Style TargetType="CheckBox" BasedOn="{StaticResource {x:Type FrameworkElement}}"/>
+    <Style TargetType="Label" BasedOn="{StaticResource {x:Type FrameworkElement}}"/>
+    <Style TargetType="ComboBox" BasedOn="{StaticResource {x:Type FrameworkElement}}"/>
+    <Style TargetType="GroupBox" BasedOn="{StaticResource {x:Type FrameworkElement}}"/>
+    
+</ResourceDictionary>
