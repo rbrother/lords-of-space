@@ -25,7 +25,7 @@
             <ComboBoxItem>Norr</ComboBoxItem>
             <ComboBoxItem>Yssaril</ComboBoxItem>
         </ComboBox>
-        <Label Grid.Row="1">Tech</Label>
+        <Label Grid.Row="1">Techs</Label>
         <StackPanel Grid.Row="1" Grid.Column="1"> 
             <CheckBox Name="Hylar" Content="Hylar V" />
             <CheckBox Name="ADT" Content="Auto Def Turrets" />

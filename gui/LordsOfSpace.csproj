@@ -78,6 +78,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TileImage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +99,7 @@
     <Compile Include="GameData\Configuration.cs" />
     <Compile Include="GameData\Game.cs" />
     <Compile Include="GameData\SpaceSystems\SetupTile.cs" />
+    <Compile Include="EnumeratorUtil.cs" />
     <Compile Include="HexLocation.cs" />
     <Compile Include="MapCanvas.cs" />
     <Compile Include="game.cs">
@@ -135,9 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Tile-HS-Firijii.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Themes\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

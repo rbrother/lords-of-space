@@ -14,10 +14,10 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <GroupBox Grid.Column="0" Grid.Row="1" Header="Attacker">
-            <FrameworkElement Name="Attacker" Tag="RaceProperties.xaml"/>
+            <FrameworkElement Name="Attacker" Tag="gui/RaceProperties.xaml"/>
         </GroupBox>
         <GroupBox Grid.Column="1" Grid.Row="1" Header="Defender">
-            <FrameworkElement Name="Defender" Tag="RaceProperties.xaml"/>
+            <FrameworkElement Name="Defender" Tag="gui/RaceProperties.xaml"/>
         </GroupBox>
         <Button Grid.Row="2">Fight!</Button>
     </Grid>

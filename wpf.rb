@@ -4,15 +4,16 @@ require 'PresentationCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf
 
 # Initialization Constants
 module Wpf
-    MessageBox = System::Windows::MessageBox
-    Window = System::Windows::Window
     Application = System::Windows::Application
     Button = System::Windows::Controls::Button
+    Colors = System::Windows::Media::Colors
+    FrameworkElement = System::Windows::FrameworkElement
+    MessageBox = System::Windows::MessageBox
+    Window = System::Windows::Window
     StackPanel = System::Windows::Controls::StackPanel
     Label = System::Windows::Controls::Label
     Thickness = System::Windows::Thickness
     XamlReader = System::Windows::Markup::XamlReader
-    Colors = System::Windows::Media::Colors
     SolidColorBrush = System::Windows::Media::SolidColorBrush
     SizeToContent = System::Windows::SizeToContent
 end
