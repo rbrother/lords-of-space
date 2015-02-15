@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CurrentGameFileName="">
+<Configuration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" CurrentGameFileName="">
   <Systems>
     <SpaceSystem xsi:type="SetupTile" name="Setup-Yellow" picFileName="Tile-Setup-Yellow.gif" />
     <SpaceSystem xsi:type="SetupTile" name="Setup-Red" picFileName="Tile-Setup-Red.gif" />
