@@ -56,10 +56,10 @@ namespace net.brotherus.game {
             set {
                 this.selected = value;
                 if (this.selected) {
-                    BitmapEffect = new OuterGlowBitmapEffect { GlowColor = Color.FromRgb(255, 255, 255), GlowSize = 30 };
+                    this.Effect = new BlurEffect { Radius = 10 };
                 }
                 else {
-                    BitmapEffect = null;
+                    this.Effect = null;
                 }
             }
         }
