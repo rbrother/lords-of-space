@@ -18,12 +18,18 @@ using System.Xml.Serialization;
 using net.brotherus.game;
 
 namespace net.brotherus.game {
-    /// <summary>
-    /// Interaction logic for Window1.xaml
-    /// </summary>
+
+    internal class MouseCapture {
+        public Double VerticalOffset { get; set; }
+        public Double HorizontalOffset { get; set; }
+        public Point Point { get; set; }
+    }
+
     public partial class MapWindow : Window 
     {
         private Game _gameData;
+        private bool _dragging;
+        private MouseCapture _dragCapture;
 
         public MapWindow() 
         {
@@ -37,6 +43,41 @@ namespace net.brotherus.game {
             else
             {
                 GameData = new Game();
+            }
+        }
+
+        void MapCanvas_MouseDown( object sender, MouseButtonEventArgs e ) {
+            _dragCapture = new MouseCapture {
+                VerticalOffset = MapScroller.VerticalOffset,
+                HorizontalOffset = MapScroller.HorizontalOffset,
+                Point = e.GetPosition( MapScroller ),
+            };
+            _dragging = true;
+        }
+
+        void MapCanvas_MouseUp( object sender, MouseButtonEventArgs e ) {
+            if ( _dragging ) {
+                _dragging = false;
+                var pos = e.GetPosition( this );
+                var dy = pos.Y - _dragCapture.Point.Y;
+                var dx = pos.X - _dragCapture.Point.Y;
+                if ( Math.Abs( dx ) > 5 || Math.Abs( dy ) > 5 ) { 
+                    // Prevent interpretation as a click if we really dragged
+                }
+            }
+        }
+
+        void MapCanvas_MouseMove( object sender, MouseEventArgs e ) {
+            if ( e.LeftButton != MouseButtonState.Pressed ) {
+                _dragging = false;
+                return;
+            }
+            if ( _dragging ) {
+                var pos = e.GetPosition( this );
+                var dy = pos.Y - _dragCapture.Point.Y;
+                var dx = pos.X - _dragCapture.Point.Y;
+                MapScroller.ScrollToVerticalOffset( _dragCapture.VerticalOffset - dy );
+                MapScroller.ScrollToHorizontalOffset( _dragCapture.HorizontalOffset - dx );
             }
         }
 

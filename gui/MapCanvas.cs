@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Input;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,8 +49,7 @@ namespace net.brotherus.game
             this.MouseWheel += new System.Windows.Input.MouseWheelEventHandler(MapCanvas_MouseWheel);
         }
 
-        void MapCanvas_MouseWheel(object sender, System.Windows.Input.MouseWheelEventArgs e)
-        {
+        void MapCanvas_MouseWheel(object sender, MouseWheelEventArgs e) {
             ZoomPercent *= (1.0 + e.Delta * 0.001);
         }
 
@@ -75,7 +75,7 @@ namespace net.brotherus.game
             get { return SelectedTile.SpaceSystem; }
             set {
                 // Update the new system to the Map array the system in the selected location to the new one
-                List<SystemType> systems = Game.Map.Where(system => system.Location != value.Location).ToList();
+                var systems = Game.Map.Where(system => system.Location != value.Location).ToList();
                 systems.Add(value);
                 systems.Sort();
                 Game.Map = systems.ToArray();

@@ -37,7 +37,9 @@
                 <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Path=ZoomPercent, StringFormat=0}"/>
                 <Slider Grid.Row="2" TickFrequency="25" TickPlacement="Both" HorizontalAlignment="Center" Minimum="25" Maximum="200" Value="{Binding Path=ZoomPercent}" Orientation="Vertical"/>
 			</Grid>
-			<ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" Background="Black">
+			<ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" Background="Black" Name="MapScroller" 
+                          PreviewMouseLeftButtonDown="MapCanvas_MouseDown" PreviewMouseLeftButtonUp='MapCanvas_MouseUp'
+                          MouseMove="MapCanvas_MouseMove">
 				<r:MapCanvas x:Name="mapCanvas" Background="Black"/>
 			</ScrollViewer>
 			<Grid Name="tileInfo" Background="LightGray" Grid.Column="2" DataContext="{Binding ElementName=mapCanvas, Path=SelectedTile}">
@@ -69,9 +71,6 @@
 				<TextBox Grid.Row="5" Name="tileText" Margin="2" Grid.Column="1" Text="{Binding Path=SystemName}" MinWidth="200"/>
 				<Label Grid.Row="6" Margin="2">System Type</Label>
 				<TextBox Grid.Row="6" Name="systemType" Grid.Column="1" Text="{Binding Path=SystemType, Mode=OneWay}" IsReadOnly="True" Background="LightGray" Margin="2" MinWidth="200"/>
-				<Label Grid.Row="7" Grid.ColumnSpan="2" FontWeight="Bold">Fleet</Label>
-				<Label Grid.Row="8">Has Fleet</Label>
-				<CheckBox Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" IsChecked="{Binding Path=HasFleet}"/>
 			</Grid>
 		</Grid>
 	</DockPanel>
